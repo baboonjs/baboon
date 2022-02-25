@@ -1,0 +1,51 @@
+{
+  "name": "@baboonjs/api-buckets",
+  "version": "1.0.0",
+  "description": "API for managing cloud buckets",
+  "scripts": {
+    "build": "npm run clean && index-ts-creator src && npm run build:cjs && npm run build:es && npm run build:types",
+    "build:cjs": "tsc -p tsconfig.json",
+    "build:es": "tsc -p tsconfig.es.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:dev": "npm run build:cjs && npm run build:types",
+    "clean": "rimraf ./dist",
+    "test": "jest",
+    "lint": "npx eslint --fix src/**"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "ts"
+    }
+  },
+  "types": "./dist/dist-types/index.d.ts",
+  "module": "./dist/dist-es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baboonjs/baboon.git",
+    "directory": "api/buckets"
+  },
+  "bugs": {
+    "url": "https://github.com/baboonjs/baboon/issues"
+  },
+  "homepage": "https://github.com/baboonjs/baboon#readme",
+  "dependencies": {
+    "@baboonjs/api-common": "^1.0.0"
+  },
+  "devDependencies": {
+    "@nabh/index-ts-creator": "^1.1.3",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest": "^27.5.1",
+    "rimraf": "^3.0.2"
+  },
+  "author": "Padmanabh Dabke",
+  "license": "MIT",
+  "main": "./dist/dist-cjs/index.js"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "baboon",
+  "version": "1.0.0",
+  "description": "A progressive platform for developing cloud-native applications",
+  "main": "index.js",
+  "scripts": {
+    "build:docs": "ts-documenter api/common api/buckets providers/aws/buckets",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baboonjs/baboon.git"
+  },
+  "keywords": [
+    "Cloud-Native",
+    "Buckets",
+    "CDN",
+    "DNS",
+    "Cloud",
+    "Cloud Functions",
+    "Lambda",
+    "Containers",
+    "Micro-Services"
+  ],
+  "author": "Padmanabh Dabke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baboonjs/baboon/issues"
+  },
+  "homepage": "https://github.com/baboonjs/baboon#readme",
+  "workspaces": [
+    "cli",
+    "api/common",
+    "api/buckets",
+    "providers/aws/buckets"
+  ],
+  "devDependencies": {
+    "@nabh/ts-api-extractor": "^1.2.2"
+  }
+}
