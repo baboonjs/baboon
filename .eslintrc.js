@@ -4,9 +4,9 @@ module.exports = {
     "commonjs": true,
     "es2021": true
   },
-  "plugins": ["@typescript-eslint", "import", "simple-import-sort"],
+  "plugins": ["@typescript-eslint", "import", "simple-import-sort", "prettier"],
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended"],
+    "plugin:import/recommended", "plugin:prettier/recommended"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
@@ -18,7 +18,7 @@ module.exports = {
     ],
     "linebreak-style": [
       "error",
-      "windows"
+      "unix"
     ],
     "quotes": [
       "error",

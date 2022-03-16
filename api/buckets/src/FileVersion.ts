@@ -5,20 +5,25 @@ export class FileVersion {
   /**
    * Fully qualified file path
    */
-  path : string;
+  path: string;
 
   /**
    * Version ID
    */
-  versionId : string;
+  versionId: string;
 
   /**
    * Date this version was created
    */
-  creationDate : Date;
+  creationDate: Date;
 
   /**
    * File size
    */
-  size : number;
+  size: number;
+
+  /**
+   * Is this version the latest version
+   */
+  isLatest?: boolean;
 }

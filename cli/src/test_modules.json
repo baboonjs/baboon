@@ -1,0 +1,520 @@
+{
+  "name": "cli-creator",
+  "modules": [
+    {
+      "name": "buckets",
+      "version": "1.0.0",
+      "providerType": "Buckets",
+      "methods": [
+        {
+          "name": "bucketExists",
+          "isAsync": true,
+          "comment": "Check if a bucket of a given name exists",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Target bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "createBucket",
+          "isAsync": true,
+          "comment": "Create a new bucket.",
+          "options": [
+            {
+              "name": "access",
+              "comment": "Access level: private or public-read",
+              "type": "string",
+              "choices": [
+                "private",
+                "public-read"
+              ]
+            },
+            {
+              "name": "location",
+              "comment": "Bucket region if different than default",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "providerOptions",
+              "comment": "Provider-specific options",
+              "isOptional": true,
+              "type": "any"
+            }
+          ],
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "deleteBucket",
+          "isAsync": true,
+          "comment": "Delete a bucket",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Name of the bucket to be deleted",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "deleteFile",
+          "isAsync": true,
+          "comment": "Delete a file",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "filePath",
+              "comment": "File key or fully qualified name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "deletePolicy",
+          "isAsync": true,
+          "comment": "Delete resource permission policy associated with a bucket",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getEncryption",
+          "isAsync": true,
+          "comment": "Get encryption configuration for a bucket",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getFileAsBuffer",
+          "isAsync": true,
+          "comment": "Download file contents",
+          "options": [
+            {
+              "name": "versionId",
+              "comment": "File version ID",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "providerOptions",
+              "comment": "Provider-specific options",
+              "isOptional": true,
+              "type": "any"
+            }
+          ],
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "filePath",
+              "comment": "File key or fully qualified name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getFileAsStream",
+          "isAsync": true,
+          "comment": "Download file contents",
+          "options": [
+            {
+              "name": "versionId",
+              "comment": "File version ID",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "providerOptions",
+              "comment": "Provider-specific options",
+              "isOptional": true,
+              "type": "any"
+            }
+          ],
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "filePath",
+              "comment": "File key or fully qualified name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getFileMetadata",
+          "isAsync": true,
+          "comment": "Get file metadata",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "filePath",
+              "comment": "File key or fully qualified path",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getPolicy",
+          "isAsync": true,
+          "comment": "Retrieve resource permission policy associated with a bucket",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getVersioning",
+          "isAsync": true,
+          "comment": "Check if versioning of files is enabled for a bucket",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getWebsiteConfiguration",
+          "isAsync": true,
+          "comment": "Get Website configuration associated with a bucket",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getWebsiteDomain",
+          "isAsync": true,
+          "comment": "Get the Website URL corresponding to a bucket",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "listBuckets",
+          "isAsync": true,
+          "comment": "List buckets visible to the current user or role",
+          "options": [
+            {
+              "name": "limit",
+              "comment": "Maximum number of files to be returned",
+              "isOptional": true,
+              "type": "number"
+            },
+            {
+              "name": "offset",
+              "comment": "Continuation token that indicates start of the result setto be returned",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "providerOptions",
+              "comment": "Provider-specific options",
+              "isOptional": true,
+              "type": "any"
+            }
+          ],
+          "params": []
+        },
+        {
+          "name": "listFiles",
+          "isAsync": true,
+          "comment": "List files in a bucket or folder within a bucket",
+          "options": [
+            {
+              "name": "folder",
+              "comment": "Parent folder",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "recursive",
+              "comment": "Flag indicating if the file list call should return only the toplevel files in the bucket or parent folder, or should return allfiles regardless of their prefix or folder",
+              "isOptional": true,
+              "type": "boolean"
+            },
+            {
+              "name": "limit",
+              "comment": "Maximum number of files to be returned",
+              "isOptional": true,
+              "type": "number"
+            },
+            {
+              "name": "offset",
+              "comment": "Continuation token that indicates start of the result setto be returned",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "providerOptions",
+              "comment": "Provider-specific options",
+              "isOptional": true,
+              "type": "any"
+            }
+          ],
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "listFileVersions",
+          "isAsync": true,
+          "comment": "Retrieve a paginated list of versions for a file",
+          "options": [
+            {
+              "name": "limit",
+              "comment": "Maximum number of files to be returned",
+              "isOptional": true,
+              "type": "number"
+            },
+            {
+              "name": "offset",
+              "comment": "Continuation token that indicates start of the result setto be returned",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "providerOptions",
+              "comment": "Provider-specific options",
+              "isOptional": true,
+              "type": "any"
+            }
+          ],
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "filePath",
+              "comment": "Fully qualified file path or key",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "putFile",
+          "isAsync": true,
+          "comment": "Upload a file to a bucket",
+          "options": [
+            {
+              "name": "access",
+              "comment": "Access level",
+              "isOptional": true,
+              "type": "string",
+              "choices": [
+                "private",
+                "public-read"
+              ]
+            },
+            {
+              "name": "contentType",
+              "comment": "Mime type",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "expires",
+              "comment": "Expiry date after which the file is to be deleted",
+              "isOptional": true,
+              "type": "Date"
+            },
+            {
+              "name": "redirect",
+              "comment": "Redirect location",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "storageClass",
+              "comment": "Cloud platform dependent storage class",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "providerOptions",
+              "comment": "Provider-specific options",
+              "isOptional": true,
+              "type": "any"
+            }
+          ],
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "filePath",
+              "comment": "File key on the cloud",
+              "type": "string"
+            },
+            {
+              "name": "file",
+              "comment": "File content",
+              "type": "Buffer"
+            }
+          ]
+        },
+        {
+          "name": "setEncryption",
+          "isAsync": true,
+          "comment": "Turn default server side encryption of bucket files on or off",
+          "options": [
+            {
+              "name": "algorithm",
+              "comment": "Encryption algorithm",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "keyId",
+              "comment": "ID of the key stored in cloud-provider's KMS",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "providerOptions",
+              "comment": "Provider-specific options",
+              "isOptional": true,
+              "type": "any"
+            }
+          ],
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "flag",
+              "comment": "true if you want to encrypt files in this bucket by default",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "setPolicy",
+          "isAsync": true,
+          "comment": "Set bucket permission policy",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "policy",
+              "comment": "Object representing bucket permission policy",
+              "type": "any"
+            }
+          ]
+        },
+        {
+          "name": "setVersioning",
+          "isAsync": true,
+          "comment": "Turn on/off versioning of files in a bucket",
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            },
+            {
+              "name": "flag",
+              "comment": "true to turn file versioning on, false to disable it",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "setWebsiteConfiguration",
+          "isAsync": true,
+          "comment": "Set Website configuration associated with a bucket",
+          "options": [
+            {
+              "name": "errorPage",
+              "comment": "Error page to be shown when requested page is not found",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "indexPage",
+              "comment": "Index page, e.g index.html",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "redirectHostName",
+              "comment": "Redirect URL if this bucket redirects requests to another bucketor Website",
+              "isOptional": true,
+              "type": "string"
+            },
+            {
+              "name": "redirectProtocol",
+              "comment": "Redirect protocol, typically https",
+              "isOptional": true,
+              "type": "string"
+            }
+          ],
+          "params": [
+            {
+              "name": "bucketName",
+              "comment": "Bucket name",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "comment": "Provides methods to manage cloud buckets and stored bojects"
+    }
+  ]
+}

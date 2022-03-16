@@ -1,17 +1,17 @@
-import { Options } from "./Options"
+import { BaseOptions } from "./BaseOptions";
 
 /**
  * Options passed to any operation that requests paginated lists
  */
-export class ListOptions extends Options {
+export class ListOptions extends BaseOptions {
   /**
    * Continuation token that indicates start of the result set
    * to be returned
    */
-  offset?: string = null;
+  start?: string = null;
 
   /**
-   * Maximum number of files to be returned
+   * Maximum number of items to be returned
    */
-  limit?: number = -1;
+  maxItems?: number = -1;
 }

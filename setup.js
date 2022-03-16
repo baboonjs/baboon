@@ -9,8 +9,7 @@ var devDeps = [
 "@typescript-eslint/parser",
 "eslint",
 "jest",
-"rimraf",
-"typedoc"
+"rimraf"
 ];
 for (const pkg of devDeps)
   execSync("npm i " + pkg + " -w ** --save-dev");

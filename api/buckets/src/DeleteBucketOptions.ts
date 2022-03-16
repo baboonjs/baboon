@@ -1,9 +1,9 @@
 import { BaseOptions } from "@baboonjs/api-common";
 
 /**
- * Options passed when downloading a file
+ * Optional configuration specified at bucket creation
  */
-export class GetFileOptions extends BaseOptions {
+export class DeleteBucketOptions extends BaseOptions {
   /**
    * Constructs the options object with supplied provider-specific options
    * @param providerOptions Provider-specific options
@@ -13,7 +13,7 @@ export class GetFileOptions extends BaseOptions {
   }
 
   /**
-   * File version ID
+   * Set this flag to true if you want to delete a non-empty bucket
    */
-  versionId?: string;
+  force?: boolean = false;
 }

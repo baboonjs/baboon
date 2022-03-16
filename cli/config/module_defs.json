@@ -1,0 +1,7 @@
+{
+  "name": "baboon",
+  "modules":
+    [
+      { "package": "@baboonjs/api-buckets", "type": "Buckets" }
+    ]
+}

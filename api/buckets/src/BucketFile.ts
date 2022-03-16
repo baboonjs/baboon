@@ -4,7 +4,15 @@ import { BucketFileMetadata } from "./BucketFileMetadata";
  */
 export class BucketFile extends BucketFileMetadata {
   /**
-    * File data/content
-    */
+   * Creates a new <code>BucketFile</code> instance
+   * @param rawResponse Raw response object from the cloud provider
+   */
+  constructor(rawResponse: any) {
+    super(rawResponse);
+  }
+
+  /**
+   * File data/content
+   */
   data: Buffer;
 }

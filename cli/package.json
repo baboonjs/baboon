@@ -1,0 +1,34 @@
+{
+  "name": "@baboonjs/cli",
+  "version": "1.0.0",
+  "description": "Command line interface to baboon.js APIs",
+  "main": "index.js",
+  "scripts": {
+    "build": "cli-creator create-config -i config/module_defs.json -s config/module_configs.json",
+    "test": "jest",
+    "lint": "npx eslint -c .eslintrc.js --no-eslintrc --fix src/*.js"
+  },
+  "keywords": [
+    "baboon.js",
+    "cloud-native",
+    "containers",
+    "microservices",
+    "buckets"
+  ],
+  "author": "Padmanabh Dabke",
+  "license": "MIT",
+  "devDependencies": {
+    "@nabh/ts-api-extractor": "^1.2.4",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "2.5.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@baboonjs/api-buckets": "^1.0.0",
+    "@baboonjs/aws-buckets": "^1.0.0",
+    "@nabh/cli-creator": "^1.1.3"
+  }
+}
