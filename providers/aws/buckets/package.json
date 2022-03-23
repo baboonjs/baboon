@@ -24,7 +24,7 @@
   "author": "Padmanabh Dabke",
   "license": "MIT",
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.51.0",
+    "@aws-sdk/client-s3": "^3.55.0",
     "@baboonjs/api-buckets": "^1.0.0"
   },
   "devDependencies": {
