@@ -1,7 +1,7 @@
 {
   "name": "@baboonjs/api-common",
   "version": "1.0.0",
-  "description": "Common classes shared by all other Baboon API modules",
+  "description": "Common classes shared by all other Baboon.js API modules",
   "scripts": {
     "build": "npm run clean && index-ts-creator src && npm run build:cjs && npm run build:es && npm run build:types",
     "build:cjs": "tsc -p tsconfig.json",
