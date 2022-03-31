@@ -12,14 +12,6 @@
     "test": "jest",
     "lint": "npx eslint --fix src/**"
   },
-  "watch": {
-    "build": {
-      "patterns": [
-        "src"
-      ],
-      "extensions": "ts"
-    }
-  },
   "main": "./dist/dist-cjs/index.js",
   "types": "./dist/dist-types/index.d.ts",
   "module": "./dist/dist-es/index.js",

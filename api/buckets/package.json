@@ -12,14 +12,6 @@
     "test": "jest test/*.test.js",
     "lint": "npx eslint --fix src/**"
   },
-  "watch": {
-    "build": {
-      "patterns": [
-        "src"
-      ],
-      "extensions": "ts"
-    }
-  },
   "types": "./dist/dist-types/index.d.ts",
   "module": "./dist/dist-es/index.js",
   "repository": {

@@ -1,6 +1,6 @@
 import { ListOptions } from "@baboonjs/api-common";
 /**
- * Options for {@link Buckets.listFileVersions} methods
+ * Options for {@link Buckets.listFileVersions} method
  */
 export class ListFileVersionsOptions extends ListOptions {
   /**

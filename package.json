@@ -35,6 +35,6 @@
     "providers/aws/buckets"
   ],
   "devDependencies": {
-    "@nabh/ts-api-extractor": "^1.2.2"
+    "@nabh/ts-api-extractor": "^1.2.4"
   }
 }

@@ -117,7 +117,7 @@ const CLOUDFRONT_OAI_POLICY =
 }`
 */
 /**
- * Implementation of {@link Buckets} interface for AWS
+ * Implementation of {@link @baboonjs/api-buckets#Buckets | Buckets} interface for AWS
  */
 export class AWSBuckets implements Buckets {
   protected client: S3Client;
